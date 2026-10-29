@@ -1,6 +1,6 @@
-import IORedis from "ioredis";
+import { Redis } from "ioredis";
 import { env } from "../config/env.js";
-export const redis = new IORedis(env.redisUrl, {
+
+export const redis = new Redis(env.redisUrl, {
   maxRetriesPerRequest: null,
-  enableReadyCheck: true,
 });
